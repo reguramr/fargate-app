@@ -1,0 +1,22 @@
+{
+  "family": "fargate-app-td",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512",
+  "executionRoleArn": "arn:aws:iam::923965563374:role/ecsTaskExecutionRole",
+  "taskRoleArn": "arn:aws:iam::923965563374:role/ecsTaskExecutionRole",
+  "containerDefinitions": [
+    {
+      "name": "flask-app",
+      "image": "DUMMY_IMAGE",
+      "essential": true,
+      "portMappings": [
+        {
+          "containerPort": 5000,
+          "protocol": "tcp"
+        }
+      ]
+    }
+  ]
+}
